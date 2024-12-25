@@ -91,3 +91,29 @@ This program is an implementation of DEMO-EM2 in C/C++ (Version: 20241212) by
  288 Liuhe Rd, Hangzhou, China, 310023                                                     
            
 Please report bugs and questions to zxg@zjut.edu.cn
+##  Evaluating the quality of the model
+Users can calculate Correlation Coefficient (CC)and integrated Fourier Shell Correlation (iFSC) between the model and density map to mesure the quality of fitness.  
+
+Usage:CalCC map_path  model_path  resolution
+
+	Required arguments:
+		map: input density map.
+		model: DEMO-EMfit fited model.
+		resolution: resolution of the density map.
+
+	Options:
+			<tr><td><b>-tp</b>&nbsp</td> <td>: atom type for correlation score calculation, <b>"CA"</b>, <b>"BB"</b>, <b>"all"</b> (default: <font color="blue"><b>CA</b></font>)</td></tr>
+			<tr><td><b>-gw</b>&nbsp</td> <td>: grid width of the map, 0: original value (default: <font color="blue"><b>0</b></font>)</td></tr>
+			<tr><td><b>-rc</b>&nbsp</td> <td>: types of score, <b>"cc"</b>,<b>"rscc"</b>,<b>"fc"</b>,<b>"ifsc"</b> (default: <font color="blue"><b>cc</b></font>)</td></tr>
+			<tr><td><b>-sl</b>&nbsp</td> <td>: flag to output intermediate information, 0: no 1: yes (default: <font color="blue"><b>0</b></font>)</td></tr>
+    	Notes:
+		<<-tp supports "CA","BB" and "all",where they indicate CA atoms, backbone atoms, and all atoms, respectively.
+		<<fc indicates fast density score. 
+		<<cc indicates correlation coefficient score. 
+		<<rscc indicates correlation score in fraction space. 
+		<<ifsc indicates integrated Fourier Shell Correlation. 
+		<<All scores are the higher the better.
+		<<The program will interpolate a new map with voxel size equal to the given value if the provided grid width is greater than the original one.
+
+	
+
