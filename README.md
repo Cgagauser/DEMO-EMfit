@@ -106,7 +106,7 @@ Usage:./CalCC map_path  model_path  resolution
 		-gw: grid width of the map, 0: original value 
 		-rc: types of score,"cc","rscc","fc","ifsc"
 		-sl: flag to output intermediate information, 0: no 1: yes 
-        Notes:
+	Notes:
 		<<-tp supports "CA","BB" and "all",where they indicate CA atoms, backbone atoms, and all atoms, respectively.
 		<<fc indicates fast density score. 
 		<<cc indicates correlation coefficient score. 
