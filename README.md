@@ -11,7 +11,7 @@ With the increasing volume of macromolecular density map data, the application o
 
 ## Our Pipeline
 
-![image](./images/pipeine.png)
+![image](./images/pipeline.png)
 
 ## Dependencies
 
